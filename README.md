@@ -4,12 +4,17 @@ Our project aims at predicting Toronto house prices. We've chosen that topic as 
 
 - **Presentation:** 
 - **GitHub:** Our Github Team1_Project will include commits and branches from all team members.
-- **Machine Learning Model:** The Machine Learning Decision FlowChart.png indicates how we decided to go with an unstructured ML, linear model. 
+- **Machine Learning Model:** The ML Decision FlowChart.png indicates how we decided to go with an unstructured ML, using sklearn linear model for price prediction.
 - **Database:** We'll be using SQL for our database.
 - **Dashboard:**
 
 ## Resources 
-We'll be using TREB sold data.
+- We'll be using TREB sold data.
+- sc2.py was used to scrape treb site for pdfs. 
+- ML Analasis FlowChart.png
+- ML Decision FlowChart.png
+- Target Variable Details and Data Structure.xlsx - excel sheet with info on which price series we'll include for forecasting, some data samples from the raw extracts from treb pdf files.
+- DataProcessing_ExcelVBA - draft of vba macro to start understanding how excel files are structured and how we might begin to automate processing. only works for midpoint pdf version at the moment.
 
 ## Summary
 
