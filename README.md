@@ -2,6 +2,13 @@
 ## Project Overview: Predicting Toronto House Prices
 Our project aims at predicting Toronto house prices. We've chosen that topic as our group was interested in making a market analysis and the house market does impact everyone. 
 
+## Team Members
+- Anne Lecomte @padawanne - anne-lecomte@hotmail.com
+- Derek Mears @mearsdj - derek.j.mears@gmail.com
+- Rezwan Ferdous @grittins - grittins1@gmail.com
+- Shivali Sahai @shivalisahai - shivali.sahai@gmail.com
+- Wayne Jin @jinwei1207 - waynejin0110@gmail.com
+
 - **Presentation:** 
 - **GitHub:** Our Github Team1_Project will include commits and branches from all team members.
 - **Machine Learning Model:** The ML Decision FlowChart.png indicates how we decided to go with an unstructured ML, using sklearn linear model for price prediction.
@@ -14,14 +21,10 @@ Our project aims at predicting Toronto house prices. We've chosen that topic as 
 - ML Analasis FlowChart.png
 - ML Decision FlowChart.png
 - Target Variable Details and Data Structure.xlsx - excel sheet with info on which price series we'll include for forecasting, some data samples from the raw extracts from treb pdf files.
+- X-variables affecting house prices: (Time Period, House-Type, Location, Interest Rates, Inflation Rate, Recession Period)
 - DataProcessing_ExcelVBA - draft of vba macro to start understanding how excel files are structured and how we might begin to automate processing. only works for midpoint pdf version at the moment.
 
-## Summary
 
 
-## Team Members
-- Derek Mears @mearsdj - derek.j.mears@gmail.com
-- Wayne Jin @jinwei1207 - waynejin0110@gmail.com
-- Rezwan Ferdous @grittins - grittins1@gmail.com
-- Shivali Sahai @shivalisahai - shivali.sahai@gmail.com
-- Anne Lecomte @padawanne - anne-lecomte@hotmail.com
+
+
