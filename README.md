@@ -1,6 +1,4 @@
 # Team 1 Final Project 
-## Project Overview: Predicting Toronto House Prices
-Our project aims at predicting Toronto house prices. We've chosen that topic as our group was interested in making a market analysis and the house market does impact everyone. 
 
 ## Team Members
 - Anne Lecomte @padawanne - anne-lecomte@hotmail.com
@@ -8,6 +6,9 @@ Our project aims at predicting Toronto house prices. We've chosen that topic as 
 - Rezwan Ferdous @grittins - grittins1@gmail.com
 - Shivali Sahai @shivalisahai - shivali.sahai@gmail.com
 - Wayne Jin @jinwei1207 - waynejin0110@gmail.com
+
+## Project Overview: Predicting Toronto House Prices
+Our project aims at predicting Toronto house prices. We've chosen that topic as our group was interested in making a market analysis and the house market does impact everyone. 
 
 - **Presentation:** 
 - **GitHub:** Our Github Team1_Project will include commits and branches from all team members.
