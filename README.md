@@ -1,4 +1,4 @@
-# Team 1 Final Project a
+# Team 1 Final Project 
 ## Project Overview: Predicting Toronto House Prices
 Our project aims at predicting Toronto house prices. We've chosen that topic as our group was interested in making a market analysis and the house market does impact everyone. 
 
