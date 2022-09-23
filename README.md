@@ -6,7 +6,7 @@ Our project aims at predicting Toronto house prices. We've chosen that topic as 
 - **GitHub:** Our Github Team1_Project will include commits and branches from all team members.
 - **Machine Learning Model:** The ML Decision FlowChart.png indicates how we decided to go with an unstructured ML, using sklearn linear model for price prediction.
 - **Database:** We'll be using PostGreSQL for our database.
-- **Dashboard:**
+- **Dashboard:** We're still debating on how to tackle that part of the assignment. We'll most likely be doing some visualizations using Tableau. 
 
 ## Resources 
 - We'll be using TREB sold data.
