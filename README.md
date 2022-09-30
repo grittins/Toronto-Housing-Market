@@ -14,9 +14,9 @@ The goal is therefore to predict average house prices while taking into account 
 - **Machine Learning Model:** 
 <img width="358" alt="ML Decision Flow Chart" src="https://user-images.githubusercontent.com/104603046/192656877-cbfa1361-aaf9-42f6-a58b-85b0d71beeea.png">
 
-This flowchart indicates how we decided to go with an unstructured ML, using sklearn linear model for price prediction.
+This flowchart indicates how we decided to go with a supervized ML, using sklearn linear model for price prediction.
 
-- **Database:** We'll be using PostGreSQL for our database.
+- **Database:** We are using PostGreSQL to sketch our database locally and then using the Amazon RDS cloud to make our database accessible from anywhere. 
 - **Dashboard:** We're still debating on how to tackle that part of the assignment. We'll most likely be doing some visualizations using Tableau. 
 
 ## Resources 
