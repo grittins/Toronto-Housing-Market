@@ -44,6 +44,28 @@ df_all_toronto_clean=pd.concat([df_all_toronto.groupby(['Community','Building_Ty
 df_all_toronto_clean.sort_values(by=['Community','Year','Quarter'],inplace=True)
 df_all_toronto_clean.drop(['Area','Municipality', 'Dollar Volume'],inplace=True,axis=1)
 
+
+###Autocorrelation check
+from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+import matplotlib.pyplot as plt
+# Use the Autocorrelation function
+# from the statsmodel library passing
+# our DataFrame object in as the data
+# Note: Limiting Lags to 50
+acfdata = df_all_toronto_clean[(df_all_toronto_clean.Community=='Junction Area')&(df_all_toronto_clean.Building_Type=='Detached')][['Year','Quarter','Average Price']]
+acfdata.Date=acfdata.Date.apply(lambda x: pd.Period(x).end_time.date())
+acfdata.set_index(['Date'],inplace=True)
+plot_acf(x=acfdata, lags=25)
+# Show the AR as a plot
+plt.show()
+plot_pacf(x=acfdata, lags=25)
+# Show the AR as a plot
+plt.show()
+
+
+
+
+
 inflation=pd.read_csv(os.path.join(os.getcwd(),'Team1_Project','Resources','BoCInflation.csv'),header=12,index_col=0)
 inflation.index = pd.to_datetime(inflation.index)
 inflation.index.dtype
