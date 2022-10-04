@@ -46,9 +46,9 @@ We’ve decided a date format to be consistent within our datasets.
 The chosen format was “yyyyq”, which would be “20224” for the last trimester of 2022. 
 
 ## ERD & Database
-A simple database diagram is sketched for the initial understanding of how the datapoints are connected. A further reiteration is expected. 
+Final ERD diagram
 
-![Database_Sketch](https://user-images.githubusercontent.com/104872971/192127719-8e3ef7e1-a358-47a3-b067-08b6667e969c.png)
+![database_diagram](https://user-images.githubusercontent.com/104872971/193709688-8da43da6-3216-4840-aced-5fbfb4f2861f.png)
 
 We are using PostGreSQL to sketch our database locally and then using the Amazon RDS cloud to make our database accessible from anywhere. 
 
