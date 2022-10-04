@@ -25,3 +25,5 @@ Our project aims at predicting Toronto house prices. We've chosen that topic as 
 - Rezwan Ferdous @grittins - grittins1@gmail.com
 - Shivali Sahai @shivalisahai - shivali.sahai@gmail.com
 - Anne Lecomte @padawanne - anne-lecomte@hotmail.com
+
+https://public.tableau.com/app/profile/wei.jin4205/viz/TorontoHouseAnalysis/Story1?publish=yes
