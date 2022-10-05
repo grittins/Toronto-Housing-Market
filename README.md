@@ -9,6 +9,11 @@
 
 --> **[Google Slides Full Presentation](https://docs.google.com/presentation/d/14mJ4PqTZpLeXYHL2puV3W5rADE4dS9Sq7-OiHuHIfdg/edit?usp=sharing)** <--
 
+**Communication Protocols:**
+We are communicating through Slack and working together on Tuesdays and Thursdays on Zoom (within the class hours and afterwards using another Zoom room). 
+We are also meeting once a week, when it fits our respective schedules. 
+
+
 ## Project Overview: Evolution Toronto House Prices
 Our project aims at predicting Toronto house prices and with that; to consider the best timing to buy or sell a property. This question impacts every Torontonian in some way, regardless of their status or current employment situation. We chose to investigate this as we had been wondering how an average person could afford a house in Toronto in the current economy. 
 The goal is therefore to predict average house prices while taking into account the type of houses (attached/detached/condo), the location, the timing, interest rates, inflation rate and recession period. This could be used by governments and policy makers looking for ways to balance the growth of house prices, but also by realtors, investors, or any individual interested in the Toronto housing market. 
