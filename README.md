@@ -34,6 +34,10 @@ Using datasets capturing Toronto House Prices of the last 21 years (2001-2022), 
 Once the data is cleaned, a PostGreSQL database is set up. We will then connect it to the Amazon RDS cloud in order to use the data within our ML model. 
 We will run the predictions, export the results and finally use Tableau to create an interactive dashboard for users to test and learn if the timing fits their budget. 
 
+
+## Overview of the tools
+![Overview_Tools](https://user-images.githubusercontent.com/104603046/194443221-315bbe12-0975-4563-baa7-1db211d656e6.png)
+
 ## Datasets Description and Sources 
 TRREB (Toronto Regional Real Estate Board) quarterly house sales reports, from 2001 to 2022.
 Bank of Canada Mortgage Rates
@@ -76,18 +80,25 @@ Linear Regression approach will be modelled for the factors effecting house pric
 - Recession Period
 
 
-## Overview of the tools
-![Overview_Tools](https://user-images.githubusercontent.com/104603046/194443221-315bbe12-0975-4563-baa7-1db211d656e6.png)
 
 
 ## Dashboard 
-### Dashboard Blueprint
-The dashboard would allow users to make quick searches 
- - Entering their preferred criteria
- - Using the interactive map
-And would then display the prices forecast produced by our ML model
+Link: **[Tableau Public](https://public.tableau.com/app/profile/wei.jin4205/viz/TorontoHouseAnalysis/Story1?publish=yes)**
 
-<img width="506" alt="dashboard" src="https://user-images.githubusercontent.com/104603046/193190907-5da30b76-5fb3-46b9-9958-dad698780b1f.png">
+Here is a quick preview. 
+
+<img width="859" alt="Tableau" src="https://user-images.githubusercontent.com/104603046/194457655-e8090a35-c666-426e-b13e-61f81ffabd67.png">
+
+1. One of the visualisations is a map where users can filter through prices history according to location, time and building type. 
+
+
+![Tableau2](https://user-images.githubusercontent.com/104603046/194457662-0ebfbf8b-18c5-4d90-a65e-ca157a09c419.png)
+
+2. We also included a line chart of the price evolution of different building types that can then be filtered by location.
+
+![Tableau3](https://user-images.githubusercontent.com/104603046/194457668-6ec232de-fc83-4584-92bf-a36005a6c4f0.png)
+
+3. This pie chart displays the ratio of sales by building types.
 
 ## Other resources 
 - sc2.py was used to scrape treb site for pdfs. 
