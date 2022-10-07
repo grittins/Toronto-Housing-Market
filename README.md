@@ -77,14 +77,15 @@ Linear Regression approach will be modelled for the factors effecting house pric
 
 
 ## Overview of the tools
-![Screenshot 2022-09-30 003139](https://user-images.githubusercontent.com/104603046/193190794-ddfd149b-b7f0-476e-bf4f-0522e377b373.png)
+![Overview_Tools](https://user-images.githubusercontent.com/104603046/194443221-315bbe12-0975-4563-baa7-1db211d656e6.png)
 
 
-## Dashboard blueprint
+## Dashboard 
+### Dashboard Blueprint
 The dashboard would allow users to make quick searches 
  - Entering their preferred criteria
  - Using the interactive map
-And would then see the prices forecast produced by our ML model
+And would then display the prices forecast produced by our ML model
 
 <img width="506" alt="dashboard" src="https://user-images.githubusercontent.com/104603046/193190907-5da30b76-5fb3-46b9-9958-dad698780b1f.png">
 
