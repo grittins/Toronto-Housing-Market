@@ -122,8 +122,8 @@ y = X['average_price'].to_frame()
 
 cutoff='2018Q4'
 y_test=y.loc[(y.index.get_level_values('_date')>cutoff)]
-X_test=y.loc[(X.index.get_level_values('_date')>cutoff)]
-X_train=y.loc[(X.index.get_level_values('_date')<=cutoff)]
+X_test=X.loc[(X.index.get_level_values('_date')>cutoff)]
+X_train=X.loc[(X.index.get_level_values('_date')<=cutoff)]
 y_train=y.loc[(y.index.get_level_values('_date')<=cutoff)]
 fh = ForecastingHorizon(y_test.index.get_level_values(level=2).unique(), is_relative=False)
 
