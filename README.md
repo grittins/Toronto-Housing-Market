@@ -85,20 +85,22 @@ Linear Regression approach will be modelled for the factors effecting house pric
 ## Dashboard 
 Link: **[Tableau Public](https://public.tableau.com/app/profile/wei.jin4205/viz/TorontoHouseAnalysis/Story1?publish=yes)**
 
-Here is a quick preview. 
-
-<img width="859" alt="Tableau" src="https://user-images.githubusercontent.com/104603046/194457655-e8090a35-c666-426e-b13e-61f81ffabd67.png">
+Here is a quick preview:
 
 1. One of the visualisations is a map where users can filter through prices history according to location, time and building type. 
 
+<img width="859" alt="Tableau" src="https://user-images.githubusercontent.com/104603046/194457655-e8090a35-c666-426e-b13e-61f81ffabd67.png">
 
-![Tableau2](https://user-images.githubusercontent.com/104603046/194457662-0ebfbf8b-18c5-4d90-a65e-ca157a09c419.png)
 
 2. We also included a line chart of the price evolution of different building types that can then be filtered by location.
 
-![Tableau3](https://user-images.githubusercontent.com/104603046/194457668-6ec232de-fc83-4584-92bf-a36005a6c4f0.png)
+![Tableau2](https://user-images.githubusercontent.com/104603046/194457662-0ebfbf8b-18c5-4d90-a65e-ca157a09c419.png)
+
 
 3. This pie chart displays the ratio of sales by building types.
+
+![Tableau3](https://user-images.githubusercontent.com/104603046/194457668-6ec232de-fc83-4584-92bf-a36005a6c4f0.png)
+
 
 ## Other resources 
 - sc2.py was used to scrape treb site for pdfs. 
