@@ -459,9 +459,10 @@ def number_render(button,charts_collapse_is_open,filters,X_vals):
         horizon.name = '_date'
         fh_new = ForecastingHorizon(horizon, is_relative=False)
         for k, v in X_vals.items():
-            # X_vals[k] = [0 if vl is None else vl for vl in v]
-            for i in range(1, 4):
-                X_vals[k].insert(0, v[0])
+          X_vals[k] = [0 if (vl is None)or(vl==[0])or (vl==0) else 1 for vl in v]
+        for k, v in X_vals.items():
+          for i in range(1, 4):
+            X_vals[k].insert(0, v[0])
 
         X_forecast_single = pd.DataFrame(data=X_vals).set_index(horizon)
         X_forecast_single['CANRECDM'] = X_forecast_single['CANRECDM'].fillna(0).explode()
