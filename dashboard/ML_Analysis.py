@@ -4,16 +4,27 @@ import os
 import plotly.express as px
 import plotly.graph_objs as go
 from plotly.subplots import make_subplots
-from Team1_Project.config import pwd, username, db_name, host, port
+#from Team1_Project.config import pwd, username, db_name, host, port
 import sqlalchemy
-from sqlalchemy import create_engine
+#from sqlalchemy import create_engine
+#from dbconnect import dbconnect
 
 #set target variable
 target = ['average_price']
 
 #connect to database and download data for analysis
-postgres_str = ('postgresql://{username}:{password}@{ipaddress}:{port}/{dbname}'.format(username=username,password=pwd,ipaddress=host,port=port,dbname=db_name))
-conn = create_engine(postgres_str)
+#postgres_str = ('postgresql://{username}:{password}@{ipaddress}:{port}/{dbname}'.format(username=username,password=pwd,ipaddress=host,port=port,dbname=db_name))
+#conn = create_engine(postgres_str)
+# conn=dbconnect()
+try:
+    from dbconnect import dbconnect
+    conn=dbconnect.dbconnect()
+except:
+    from sqlalchemy import create_engine
+    from Team1_Project.config import pwd, username, db_name, host, port
+    postgres_str = ('postgresql://{username}:{password}@{ipaddress}:{port}/{dbname}'.format(username=username,password=pwd,ipaddress=host,port=port,dbname=db_name))
+    conn = create_engine(postgres_str)
+
 df_all = pd.read_sql('Select * from home_prices',con=conn)
 recession = pd.read_sql('Select * from recession_indicator',con=conn)
 mortgage_rates = pd.read_sql('Select * from interest_rate',con=conn)
@@ -210,7 +221,6 @@ from sktime.forecasting.arima import AutoARIMA
 
 forecaster = TransformedTargetForecaster(
     [
-        ("deseasonalize", Deseasonalizer(model="multiplicative", sp=4)),
         ("detrend", Detrender(forecaster=PolynomialTrendForecaster(degree=2))),
         (
             "forecast",
@@ -225,21 +235,32 @@ forecaster = TransformedTargetForecaster(
 )
 
 fh = ForecastingHorizon(y_test.index.get_level_values(level=2).unique(), is_relative=False)
-forecaster.fit(y_train,X=X_train)
-y_pred = forecaster.predict(fh,X=X_test)
-mean_absolute_percentage_error(y_test, y_pred, symmetric=False)
+forecaster.fit(y,X=X)
+#y_pred = forecaster.predict(fh,X=X)
+#mean_absolute_percentage_error(y_test, y_pred, symmetric=False)
 
-
+horizon=pd.period_range('2022-01-01','2023-9-30',freq='q')
+horizon.name='_date'
+fh_new=ForecastingHorizon(horizon,is_relative=False)
+# d={'avg_five_year_rates':[6.14]*7,'CPI_TRIM':[5.2]*7,'CANRECDM':[0]*7}
+# {'mtge': {'m1': 6.25, 'm2': 6.25, 'm3': 5.25, 'm4': 6.25},
+#  'infl': {'i1': 5.75, 'i2': 5.25, 'i3': 5.25, 'i4': 5.25},
+#  'rec': {'r1': 0, 'r2': 1, 'r3': 0, 'r4': 0}}
+#
+# X_forecast_single=pd.DataFrame(data=d).set_index(horizon)
+# X_forecast=pd.concat([X_forecast_single.assign(community=g[0],building_type=g[1]) for g in grps])
+# X_forecast=X_forecast.reset_index().set_index(['community','building_type','_date'])
+# y_pred=forecaster.predict(fh_new,X=X_forecast)
 
 
 import plotly.graph_objects as go
-def make_plots(y_train,y_pred,y_test,community_filter,building_filter):
+def make_plots(y_train,y_pred,community_filter,building_filter):
     y_train_plot = y_train.loc[(y_train.index.get_level_values('community') == community_filter) & (
             y_train.index.get_level_values('building_type') == building_filter)]
     y_pred_plot = y_pred.loc[(y_pred.index.get_level_values('community') == community_filter) & (
             y_pred.index.get_level_values('building_type') == building_filter)]
-    y_test_plot = y_test.loc[(y_test.index.get_level_values('community') == community_filter) & (
-            y_test.index.get_level_values('building_type') == building_filter)]
+    # y_test_plot = y_test.loc[(y_test.index.get_level_values('community') == community_filter) & (
+    #         y_test.index.get_level_values('building_type') == building_filter)]
 
     y_train_plot = y_train_plot.reset_index()
     y_train_plot = y_train_plot.set_index('_date')
@@ -249,9 +270,9 @@ def make_plots(y_train,y_pred,y_test,community_filter,building_filter):
     y_pred_plot = y_pred_plot.set_index('_date')
     y_pred_plot2 = y_pred_plot.drop(['community', 'building_type'], axis=1)
 
-    y_test_plot = y_test_plot.reset_index()
-    y_test_plot = y_test_plot.set_index('_date')
-    y_test_plot = y_test_plot.drop(['community', 'building_type'], axis=1)
+    # y_test_plot = y_test_plot.reset_index()
+    # y_test_plot = y_test_plot.set_index('_date')
+    # y_test_plot = y_test_plot.drop(['community', 'building_type'], axis=1)
 
     #fig = go.Figure()
     fig = make_subplots(
@@ -263,8 +284,8 @@ def make_plots(y_train,y_pred,y_test,community_filter,building_filter):
     )
     fig.add_trace(go.Scatter(x=y_train_plot.index.strftime('%m-%Y'), y=y_train_plot['average_price'],
                              name=community_filter + ' Historical Prices'),row=1,col=1)
-    fig.add_trace(go.Scatter(x=y_test_plot.index.strftime('%m-%Y'), y=y_test_plot['average_price'], mode='lines',
-                             name=community_filter + ' Historical Prices in Forecasting Horizon'),row=1,col=1)
+    # fig.add_trace(go.Scatter(x=y_test_plot.index.strftime('%m-%Y'), y=y_test_plot['average_price'], mode='lines',
+    #                          name=community_filter + ' Historical Prices in Forecasting Horizon'),row=1,col=1)
     fig.add_trace(
         go.Scatter(x=y_pred_plot2.index.strftime('%m-%Y'), y=y_pred_plot2['average_price'], mode='lines+markers',
                    name=community_filter + ' Forecast Prices'),row=1,col=1)
@@ -284,9 +305,9 @@ def make_plots(y_train,y_pred,y_test,community_filter,building_filter):
 
 
 
-    fig.show(renderer='browser')
+#    fig.show(renderer='browser')
 
-make_plots(y_train,y_pred,y_test,'Junction Area','Semi-Detached')
+#make_plots(y,y_pred,'Junction Area','Semi-Detached')
 
 # df_all_toronto_clean_with_rates_dummies = pd.get_dummies(df_all_toronto_clean_with_rates)
 # #
