@@ -90,7 +90,7 @@ Line chart of the price evolution of different building types that can then be f
 
 ![Tableau3](https://user-images.githubusercontent.com/104603046/194457668-6ec232de-fc83-4584-92bf-a36005a6c4f0.png)
 
-Pie chart displays the ratio of sales by building types.
+Pie chart displaying the ratio of sales by building types.
 
 
 ## Other resources 
