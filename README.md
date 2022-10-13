@@ -55,7 +55,7 @@ The chosen format was “yyyyq”, which would be “20224” for the last trime
 ## ERD & Database
 Final ERD diagram
 
-![database_diagram](https://user-images.githubusercontent.com/104872971/193709688-8da43da6-3216-4840-aced-5fbfb4f2861f.png)
+![database_diagram](https://user-images.githubusercontent.com/104872971/195730450-05b525b9-2ea9-433f-8228-93863184f723.png)
 
 We are using PostGreSQL to sketch our database locally and then using the Amazon RDS cloud to make our database accessible from anywhere. 
 
