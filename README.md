@@ -79,7 +79,7 @@ Linear Regression approach has been modelled for the factors effecting house pri
 
 
 
-## Dashboard 
+## Data Visualizations
 Link: **[Tableau Public](https://public.tableau.com/app/profile/wei.jin4205/viz/TorontoHouseAnalysis/Story1?publish=yes)**
 
 Here is a quick preview:
@@ -91,6 +91,10 @@ Line chart of the price evolution of different building types that can then be f
 ![Tableau3](https://user-images.githubusercontent.com/104603046/194457668-6ec232de-fc83-4584-92bf-a36005a6c4f0.png)
 
 Pie chart displaying the ratio of sales by building types.
+
+## Interactive Dashboard
+Link: **[Interactive Map using Dash & Python](https://user-images.githubusercontent.com/104603046/195708672-6d72667b-fe0a-4edc-b909-e99c175a24dc.png)**
+![Dash-Python](https://user-images.githubusercontent.com/104603046/195708799-3a6d8dd0-e4d1-41d0-9551-6e9e95a564e0.png)
 
 
 ## Other resources 
