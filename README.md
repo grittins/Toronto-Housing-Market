@@ -34,6 +34,16 @@ We ran the predictions, exported the results and finally used Tableau to create 
 ## Overview of the tools
 ![OverviewTools_](https://user-images.githubusercontent.com/104603046/195485633-60e0183e-fdb8-49cd-9575-65dc1eb1ba09.png)
 
+## Preparing the data 
+We’ve decided a date format to be consistent within our datasets. 
+The chosen format was “yyyyq”, which would be “20224” for the last trimester of 2022. 
+
+## ERD & Database
+Final ERD diagram
+
+![QuickDBD-export (1)](https://user-images.githubusercontent.com/104872971/195780864-5a14c7b6-064f-47fd-a452-2d06a8751828.png)
+
+We are using PostGreSQL to sketch our database locally and then using the Amazon RDS cloud to make our database accessible from anywhere. 
 
 ## Datasets Description and Sources 
 - TRREB (Toronto Regional Real Estate Board) quarterly house sales reports, from 2001 to 2022
@@ -62,20 +72,6 @@ The data we are using was presented into individual quarterly reports that we co
 Below is a snippet of our final csv file, containing 21 years of house prices, by location and house type.
 
 <img width="1180" alt="Screen Shot 2023-01-14 at 11 29 26 PM" src="https://user-images.githubusercontent.com/104872971/212523008-126cb24f-f625-4111-ac34-ffa0d35aefdc.png">
-
-
-
-## Preparing the data 
-We’ve decided a date format to be consistent within our datasets. 
-The chosen format was “yyyyq”, which would be “20224” for the last trimester of 2022. 
-
-## ERD & Database
-Final ERD diagram
-
-![QuickDBD-export (1)](https://user-images.githubusercontent.com/104872971/195780864-5a14c7b6-064f-47fd-a452-2d06a8751828.png)
-
-
-We are using PostGreSQL to sketch our database locally and then using the Amazon RDS cloud to make our database accessible from anywhere. 
 
 ## Machine Learning Model
 <img width="358" alt="ML Decision Flow Chart" src="https://user-images.githubusercontent.com/104603046/192656877-cbfa1361-aaf9-42f6-a58b-85b0d71beeea.png">
