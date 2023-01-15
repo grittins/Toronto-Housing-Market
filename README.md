@@ -45,7 +45,8 @@ We ran the predictions, exported the results and finally used Tableau to create 
 The data we are using was presented into individual quarterly reports that we converted into a single csv file, using Python (pandas and openpyxl) and Excel VBA. 
 Below is a snippet of our final csv file, containing 21 years of house prices, by location and house type.
 
-![Screenshot 2022-09-29 225838](https://user-images.githubusercontent.com/104603046/193189645-f8c60777-7422-476a-b208-7106a7cc5465.png)
+<img width="1180" alt="Screen Shot 2023-01-14 at 11 29 26 PM" src="https://user-images.githubusercontent.com/104872971/212523008-126cb24f-f625-4111-ac34-ffa0d35aefdc.png">
+
 
 
 ## Preparing the data 
