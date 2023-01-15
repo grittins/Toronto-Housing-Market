@@ -38,18 +38,18 @@ We ran the predictions, exported the results and finally used Tableau to create 
 We’ve decided a date format to be consistent within our datasets. 
 The chosen format was “yyyyq”, which would be “20224” for the last trimester of 2022. 
 
+## Datasets Description and Sources 
+- TRREB (Toronto Regional Real Estate Board) quarterly house sales reports, from 2001 to 2022
+- Bank of Canada Mortgage Rates
+- Canada Recession Indicator
+- Toronto Neighbourhoods GeoJSON
+
 ## ERD & Database
 Final ERD diagram
 
 ![QuickDBD-export (1)](https://user-images.githubusercontent.com/104872971/195780864-5a14c7b6-064f-47fd-a452-2d06a8751828.png)
 
 We are using PostGreSQL to sketch our database locally and then using the Amazon RDS cloud to make our database accessible from anywhere. 
-
-## Datasets Description and Sources 
-- TRREB (Toronto Regional Real Estate Board) quarterly house sales reports, from 2001 to 2022
-- Bank of Canada Mortgage Rates
-- Canada Recession Indicator
-- Toronto Neighbourhoods GeoJSON
 
 ## Before/After of the primary dataset 
 ### Before
