@@ -42,6 +42,22 @@ We ran the predictions, exported the results and finally used Tableau to create 
 - Toronto Neighbourhoods GeoJSON
 
 ## Before/After of the primary dataset 
+### Before
+Sample sections of raw datasets:<br/> 
+<br/>
+Home Prices<br/>
+<img width="1036" alt="Screen Shot 2023-01-14 at 11 53 27 PM" src="https://user-images.githubusercontent.com/104872971/212523572-0cbb1e03-febb-4754-b075-37cc4b8ab3c0.png"><br/>
+<br/>
+Canada Recession Indicator<br/>
+<img width="415" alt="Screen Shot 2023-01-14 at 11 46 28 PM" src="https://user-images.githubusercontent.com/104872971/212523413-0482a4dd-339e-4b40-b721-a2c01c0c3a82.png"><br/>
+<br/>
+Mortgage Rates<br/>
+<img width="231" alt="Screen Shot 2023-01-14 at 11 48 43 PM" src="https://user-images.githubusercontent.com/104872971/212523466-4f3f179d-56f5-4e60-9b22-addfccf27dc4.png"><br/>
+<br/>
+Inflation Rates<br/>
+<img width="184" alt="Screen Shot 2023-01-14 at 11 50 01 PM" src="https://user-images.githubusercontent.com/104872971/212523489-fd3ef627-5023-470a-894c-5c520bb9365c.png"><br/>
+
+### After
 The data we are using was presented into individual quarterly reports that we converted into a single csv file, using Python (pandas and openpyxl) and Excel VBA. 
 Below is a snippet of our final csv file, containing 21 years of house prices, by location and house type.
 
